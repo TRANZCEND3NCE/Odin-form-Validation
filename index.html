@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Form Validation</title>
+	<link rel="stylesheet" href="styles.css">
+	<script src="script.js" defer></script>
+</head>
+<body>
+
+	<main>
+		<h1>Form Validation</h1>
+
+		<form id="signup-form" novalidate>
+			<div class="form-group">
+				<label for="email">Email</label>
+				<input
+					type="email"
+					id="email"
+					name="email"
+					autocomplete="email"
+					aria-describedby="email-error"
+					required
+				/>
+				<span class="error" id="email-error" aria-live="polite"></span>
+			</div>
+
+			<div class="form-group">
+				<label for="country">Country</label>
+				<select
+					id="country"
+					name="country"
+					autocomplete="country"
+					aria-describedby="country-error"
+					required
+				>
+					<option value="">Select a country</option>
+					<option value="US">United States</option>
+					<option value="CA">Canada</option>
+					<option value="GB">United Kingdom</option>
+				</select>
+				<span class="error" id="country-error" aria-live="polite"></span>
+			</div>
+
+			<div class="form-group">
+				<label for="zip">Zip / Postal Code</label>
+				<input
+					type="text"
+					id="zip"
+					name="zip"
+					autocomplete="postal-code"
+					aria-describedby="zip-error"
+					required
+				>
+				<span class="error" id="zip-error" aria-live="polite"></span>
+			</div>
+
+			<div class="form-group">
+				<label for="password">Password</label>
+				<input
+					type="password"
+					id="password"
+					name="password"
+					autocomplete="new-password"
+					minlength="8"
+					aria-describedby="password-error"
+					required
+				>
+				<span class="error" id="password-error" aria-live="polite"></span>
+			</div>
+
+			<div class="form-group">
+				<label for="confirm-password">Confirm Password</label>
+				<input
+					type="password"
+					id="confirm-password"
+					name="confirm-password"
+					autocomplete="new-password"
+					aria-describedby="confirm-password-error"
+					required
+				>
+				<span class="error" id="confirm-password-error" aria-live="polite"></span>
+			</div>
+
+			<button type="submit">Submit</button>
+			<p id="form-status" role="status" aria-live="polite"></p>
+		</form>
+	</main>
+
+	
+</body>
+</html>
